@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Example</title>
+    <style>
+        :root {
+            --background-color: #ffffff;
+            --text-color: #000000;
+        }
+
+        [data-theme="dark"] {
+            --background-color: #121212;
+            --text-color: #ffffff;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        #theme-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="theme-toggle">Toggle Theme</button>
+    <h1>texto exemplo</h1>
+    <script>
+        const toggleButton = document.getElementById('theme-toggle');
+        let currentTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+
+        document.documentElement.setAttribute('data-theme', currentTheme);
+
+        toggleButton.addEventListener('click', () => {
+            currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            localStorage.setItem('theme', currentTheme);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typewriter Effect</title>
+    <style>
+        #typewriter {
+            font-family: monospace;
+            border-right: 2px solid black;
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .blinking-caret {
+            animation: blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: black; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="typewriter"></div>
+
+    <script>
+        const text = "hello wolr";
+        const correctText = "rld!";
+        let index = 0;
+        let isDeleting = false;
+        let deleteIndex = 0;
+
+        function typeWriter() {
+            const typewriterElement = document.getElementById("typewriter");
+
+            if (index < text.length && !isDeleting) {
+                typewriterElement.innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, 400); // Ajuste a velocidade de digitação
+            } else if (index === text.length && !isDeleting) {
+                // Começa a apagar
+                isDeleting = true;
+                setTimeout(typeWriter, 800); // Pequena pausa antes de começar a apagar
+            } else if (isDeleting && deleteIndex < 2) {
+                // Apaga os últimos dois caracteres
+                typewriterElement.innerHTML = text.substring(0, text.length - deleteIndex - 1);
+                deleteIndex++;
+                setTimeout(typeWriter, 300); // Ajuste a velocidade de apagamento
+            } else if (isDeleting && deleteIndex === 2) {
+                // Escreve "world"
+                typewriterElement.innerHTML = text.substring(0, text.length - 2) + correctText;
+                typewriterElement.classList.add("blinking-caret");
+            }
+        }
+
+        typeWriter();
+    </script>
+
+</body>
+</html>

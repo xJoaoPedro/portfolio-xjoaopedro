@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.2s;
+}
+
+@keyframes jump {
+    0%, 100% {
+        transform: rotate(90deg) translateX(0);
+    }
+    50% {
+        transform: rotate(90deg) translateX(-20px);
+    }
+}
+
+:root {
+    --primary-color: #231f30;
+    --second-background: #444657;
+    --text-color: #fff;
+    --primary-font: "Montserrat", sans-serif;
+}
+
+[data-theme="light"] {
+    --primary-color: #ffffff;
+    --second-background: #80808025;
+    --text-color: #000000;
+
+    .linkedin,
+    .github,
+    .whatsapp {
+        filter: opacity(40%) invert(100%);
+    }
+
+    .linkedin:hover {
+        filter: opacity(100%) invert(100%) drop-shadow(0 0 10px #0E76A8);
+    }
+
+    .github:hover {
+        filter: opacity(100%) invert(100%) drop-shadow(0 0 10px #a81f1f);
+    }
+
+    .whatsapp:hover {
+        filter: opacity(100%) invert(100%) drop-shadow(0 0 10px #25D366);
+    }
+
+    .arrow {
+        filter: opacity(40%);
+    }
+
+    .arrow:hover {
+        filter: opacity(100%);
+        cursor: pointer;
+    }
+}
+
+header {
+    background-color: var(--primary-color);
+    height: 10vh;
+    filter: drop-shadow(0 5px 10px #00000025);
+}
+
+#theme-toggle {
+    background-color: var(--second-background);
+    cursor: pointer;
+    filter: opacity(70%);
+}
+
+#theme-toggle:hover {
+    filter: opacity(100%);
+}
+
+.nav-option {
+    font-family: var(--primary-font);
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.2em;
+    font-weight: bold;
+    filter: opacity(40%);
+    transition: all 0.2s;
+}
+
+.nav-option:hover {
+    filter: opacity(100%);
+}
+
+.underline::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -7px;
+    width: 0;
+    height: 2px;
+    background-color: var(--text-color);
+    transition: width 0.4s ease, left 0.4s ease;
+}
+
+.underline:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.linkedin,
+.github,
+.whatsapp {
+    filter: opacity(40%);
+    transform: scale(1);
+    transition: all 0.2s;
+}
+
+.linkedin:hover {
+    filter: opacity(100%) drop-shadow(0 0 10px #0E76A8);
+    transform: scale(1.1);
+}
+
+.github:hover {
+    filter: opacity(100%) drop-shadow(0 0 10px #a81f1f);
+    transform: scale(1.1);
+}
+
+.whatsapp:hover {
+    filter: opacity(100%) drop-shadow(0 0 10px #25D366);
+    transform: scale(1.1);
+}
+
+section {
+    height: 90vh;
+    background-color: var(--primary-color);
+}
+
+#title {
+    font-size: 5vw;
+    color: var(--text-color);
+    font-family: var(--primary-font);
+    font-weight: bold;
+}
+
+#subtitle {
+    font-size: 1.8vw;
+    color: var(--text-color);
+    font-weight: normal;
+    filter: opacity(50%);
+}
+
+.icon-container {
+    text-align: center;
+    cursor: default;
+    width: 6vw;
+  }
+
+  .icon {
+    filter: grayscale(100%);
+    min-width: 2vw;
+    width: 2.8vw;
+    transform: scale(1);
+    transition: all 0.2s ease;
+  }
+
+  .icon-container:hover .icon {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+  }
+
+  .text {
+    visibility: hidden;
+    font-size: 1em;
+    font-family: var(--primary-font);
+    color: var(--text-color);
+    filter: opacity(0);
+    transform: translateY(10px);
+    transition: all 0.2s ease;
+  }
+
+  .icon-container:hover .text {
+    filter: opacity(100%);
+    transform: translateY(0);
+    visibility: visible;
+  }
+
+.little-about-me {
+    color: var(--text-color);
+    font-family: var(--primary-font);
+    font-size: 0.8vw;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.arrow {
+    filter: invert(100%) opacity(40%);
+    font-weight: bold;
+    font-size: 3em;
+    transform: rotate(90deg);
+    animation-name: jump;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.arrow:hover {
+    filter: invert(100%) opacity(100%);
+    cursor: pointer;
+}
