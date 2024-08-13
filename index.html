@@ -2,6 +2,8 @@
 <html lang="pt-br">
 
 <head>
+    <link rel="icon" media="(prefers-color-scheme: light)" href="imagens/portfolioDark.ico">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="imagens/portfolioWhite.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -15,31 +17,34 @@
 </head>
 
 <body>
+    <img id="back-to-top" src="imagens/back-to-top.png" title="Voltar ao topo" onclick="topFunction()">
+
     <header class="d-flex align-items-center sticky-top p-4">
 
         <div id="theme-toggle" class="rounded-circle me-3 p-1" title="Alterar tema">
-            <img id="theme-image" src="/imagens/dark.png" alt="imagem de lua">
+            <img id="theme-image" alt="icone de troca de tema">
         </div>
 
         <nav>
-            <a class="nav-option underline mx-2" href="#about">Sobre mim</a>
+            <a class="nav-option underline mx-2" href="#about-me">Sobre mim</a>
             <a class="nav-option underline mx-2" href="#projects">Projetos</a>
             <a class="nav-option underline mx-2" href="#formations">Formações</a>
             <a class="nav-option underline mx-2" href="#contact">Contato</a>
         </nav>
 
+
         <nav class="ms-auto">
             <a href="https://www.linkedin.com/in/xjoaopedro/" target="_blank" class="mx-3"
-                title="linkedin.com/in/xjoaopedro"><img class="linkedin" src="/imagens/linkedin.png"
+                title="linkedin.com/in/xjoaopedro"><img class="linkedin" src="imagens/linkedin.png"
                     alt="icone linkedin"></a>
             <a href="https://github.com/xJoaoPedro" target="_blank" class="mx-3" title="github.com/xJoaoPedro"><img
-                    class="github" src="/imagens/github.png" alt="icone github"></a>
+                    class="github" src="imagens/github.png" alt="icone github"></a>
             <a href="" target="_blank" class="mx-3" title="(51) 99855-7211"><img class="whatsapp"
-                    src="/imagens/whatsapp.png" alt="icone whatsapp"></a>
+                    src="imagens/whatsapp.png" alt="icone whatsapp"></a>
         </nav>
     </header>
 
-    <section class="d-flex flex-column justify-content-between">
+    <section class="d-flex flex-column justify-content-between mb-5">
         <div class="d-flex">
             <div class="w-50 px-5 mt-5 d-flex flex-column justify-content-between">
                 <div>
@@ -49,20 +54,20 @@
 
                 <div class="tecnologies d-flex mx-auto">
                     <div class="icon-container mx-3">
-                        <img class="icon" src="/imagens/html.png" alt="icone html">
+                        <img class="icon" src="imagens/html.png" alt="icone html">
                         <div class="text mt-3">HTML 5</div>
                     </div>
                     
                     <div class="icon-container mx-3">
-                        <img class="icon" src="/imagens/css.png" alt="icone css">
+                        <img class="icon" src="imagens/css.png" alt="icone css">
                         <div class="text mt-3">CSS 3</div>
                     </div>
                     <div class="icon-container mx-3">
-                        <img class="icon" src="/imagens/js.png" alt="icone javascript">
+                        <img class="icon" src="imagens/js.png" alt="icone javascript">
                         <div class="text mt-3">Javascript</div>
                     </div>
                     <div class="icon-container mx-3">
-                        <img class="icon" src="/imagens/figma.png" alt="icone figma">
+                        <img class="icon" src="imagens/figma.png" alt="icone figma">
                         <div class="text mt-3">Figma</div>
                     </div>
                 </div>
@@ -81,11 +86,19 @@
 
         </div>
         <div class="mx-auto inline-block">
-            <img class="arrow" src="/imagens/arrow.png" alt="icone de seta">
+            <img class="arrow" src="imagens/arrow.png" alt="icone de seta">
         </div>
     </section>
 
-
+    <section id="about-me" class="d-flex">
+        <aside class="about-me-background h-100 w-25">
+            <div class="about-me-filter"></div>
+        </aside>
+        
+        <aside class="about-me-text w-75 p-5 ms-5 mt-5">
+            <h3 class="">Meu nome é João Pedro da Mata, tenho 20 anos e estou </h3>
+        </aside>
+    </section>
 
 
 

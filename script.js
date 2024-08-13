@@ -6,10 +6,10 @@ const devLight = "imagens/devLight.svg";
 const devObject = document.getElementById("devIlustration");
 
 if (currentTheme == 'light') {
-    image.src = "/imagens/light.png";
+    image.src = "imagens/light.png";
     devObject.setAttribute("src", devLight);
 } else {
-    image.src = "/imagens/dark.png";
+    image.src = "imagens/dark.png";
     devObject.setAttribute("src", devDark);
 }
 
@@ -20,10 +20,25 @@ toggleButton.addEventListener('click', () => {
     document.documentElement.setAttribute('data-theme', currentTheme);
     localStorage.setItem('theme', currentTheme);
     if (currentTheme == 'light') {
-        image.src = "/imagens/light.png";
+        image.src = "imagens/light.png";
         devObject.setAttribute("src", devLight);
     } else {
-        image.src = "/imagens/dark.png";
+        image.src = "imagens/dark.png";
         devObject.setAttribute("src", devDark);
     }
 });
+
+window.onscroll = function() {scrollFunction()};
+const btn = document.getElementById("back-to-top");
+
+function scrollFunction() {
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+      btn.classList.add("show"); // Adiciona a classe para mostrar o botão
+    } else {
+      btn.classList.remove("show"); // Remove a classe para esconder o botão
+    }
+  }
+// Quando o usuário clicar no botão, rolar suavemente para o topo da página
+function topFunction() {
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}

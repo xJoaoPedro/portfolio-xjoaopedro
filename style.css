@@ -6,9 +6,12 @@
 }
 
 @keyframes jump {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: rotate(90deg) translateX(0);
     }
+
     50% {
         transform: rotate(90deg) translateX(-20px);
     }
@@ -16,6 +19,7 @@
 
 :root {
     --primary-color: #231f30;
+    --primary-color-70: #231f3070;
     --second-background: #444657;
     --text-color: #fff;
     --primary-font: "Montserrat", sans-serif;
@@ -23,6 +27,7 @@
 
 [data-theme="light"] {
     --primary-color: #ffffff;
+    --primary-color-70: #ffffff70;
     --second-background: #80808025;
     --text-color: #000000;
 
@@ -52,6 +57,10 @@
         filter: opacity(100%);
         cursor: pointer;
     }
+}
+
+body {
+    background-color: var(--primary-color);
 }
 
 header {
@@ -123,6 +132,30 @@ header {
     transform: scale(1.1);
 }
 
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    background-color: #b8b8b8;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    filter: invert(100%) opacity(40%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+}
+
+#back-to-top.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+#back-to-top.show:hover {
+    opacity: 40%;
+}
+
 section {
     height: 90vh;
     background-color: var(--primary-color);
@@ -146,22 +179,22 @@ section {
     text-align: center;
     cursor: default;
     width: 6vw;
-  }
+}
 
-  .icon {
+.icon {
     filter: grayscale(100%);
     min-width: 2vw;
     width: 2.8vw;
     transform: scale(1);
     transition: all 0.2s ease;
-  }
+}
 
-  .icon-container:hover .icon {
+.icon-container:hover .icon {
     filter: grayscale(0%);
     transform: scale(1.1);
-  }
+}
 
-  .text {
+.text {
     visibility: hidden;
     font-size: 1em;
     font-family: var(--primary-font);
@@ -169,13 +202,13 @@ section {
     filter: opacity(0);
     transform: translateY(10px);
     transition: all 0.2s ease;
-  }
+}
 
-  .icon-container:hover .text {
+.icon-container:hover .text {
     filter: opacity(100%);
     transform: translateY(0);
     visibility: visible;
-  }
+}
 
 .little-about-me {
     color: var(--text-color);
@@ -183,49 +216,6 @@ section {
     font-size: 0.8vw;
     font-weight: bold;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .arrow {
     filter: invert(100%) opacity(40%);
@@ -242,4 +232,16 @@ section {
 .arrow:hover {
     filter: invert(100%) opacity(100%);
     cursor: pointer;
+}
+
+.about-me-background {
+    background-image: url(imagens/about-me.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.about-me-filter {
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color-70);
 }
