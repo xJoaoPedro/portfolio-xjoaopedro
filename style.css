@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     transition: all 0.2s;
+    font-family: var(--primary-font);
 }
 
 @keyframes jump {
@@ -22,6 +23,7 @@
     --primary-color-70: #231f3070;
     --second-background: #444657;
     --text-color: #fff;
+    --link-color: #FFFFFF70;
     --primary-font: "Montserrat", sans-serif;
 }
 
@@ -30,6 +32,7 @@
     --primary-color-70: #ffffff70;
     --second-background: #80808025;
     --text-color: #000000;
+    --link-color: #00000070;
 
     .linkedin,
     .github,
@@ -80,7 +83,6 @@ header {
 }
 
 .nav-option {
-    font-family: var(--primary-font);
     text-decoration: none;
     color: var(--text-color);
     font-size: 1.2em;
@@ -118,17 +120,17 @@ header {
 }
 
 .linkedin:hover {
-    filter: opacity(100%) drop-shadow(0 0 10px #0E76A8);
+    filter: opacity(100%) drop-shadow(0 0 20px #0E76A8);
     transform: scale(1.1);
 }
 
 .github:hover {
-    filter: opacity(100%) drop-shadow(0 0 10px #a81f1f);
+    filter: opacity(100%) drop-shadow(0 0 20px #a81f1f);
     transform: scale(1.1);
 }
 
 .whatsapp:hover {
-    filter: opacity(100%) drop-shadow(0 0 10px #25D366);
+    filter: opacity(100%) drop-shadow(0 0 20px #25D366);
     transform: scale(1.1);
 }
 
@@ -164,7 +166,6 @@ section {
 #title {
     font-size: 5vw;
     color: var(--text-color);
-    font-family: var(--primary-font);
     font-weight: bold;
 }
 
@@ -197,7 +198,6 @@ section {
 .text {
     visibility: hidden;
     font-size: 1em;
-    font-family: var(--primary-font);
     color: var(--text-color);
     filter: opacity(0);
     transform: translateY(10px);
@@ -212,7 +212,6 @@ section {
 
 .little-about-me {
     color: var(--text-color);
-    font-family: var(--primary-font);
     font-size: 0.8vw;
     font-weight: bold;
 }
@@ -234,6 +233,20 @@ section {
     cursor: pointer;
 }
 
+aside {
+    color: var(--text-color);
+}
+
+aside h2 {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 2vw;
+}
+
+aside p {
+    font-size: 1vw;
+}
+
 .about-me-background {
     background-image: url(imagens/about-me.png);
     background-position: center;
@@ -245,3 +258,23 @@ section {
     height: 100%;
     background-color: var(--primary-color-70);
 }
+
+.about-me-list {
+    list-style-type: none;
+    font-size: 1vw;
+}
+
+.about-me-list a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--link-color);
+    transform: scale(1);
+}
+
+.about-me-list a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+    color: var(--text-color);
+    transform: scale(1.2);
+}
+
