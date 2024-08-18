@@ -1,18 +1,18 @@
 const toggleButton = document.getElementById('theme-toggle'); 
 let currentTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"); // armazena localmente a preferencia ou combina com a cor do navegador
 let image = document.getElementById('theme-image');
-const devDark = "imagens/devDark.svg";
-const devLight = "imagens/devLight.svg";
+const devDark = "imagens/outras/devDark.svg";
+const devLight = "imagens/outras/devLight.svg";
 const devObject = document.getElementById("devIlustration");
 
 document.documentElement.setAttribute('data-theme', currentTheme); // mantém a preferência de cor escolhida
 
 function verifyTheme() {
     if (currentTheme == 'light') {
-        image.src = "imagens/light.png";
+        image.src = "imagens/outras/light.png";
         devObject.setAttribute("src", devLight);
     } else {
-        image.src = "imagens/dark.png";
+        image.src = "imagens/outras/dark.png";
         devObject.setAttribute("src", devDark);
     }
 }
