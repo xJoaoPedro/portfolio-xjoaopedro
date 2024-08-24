@@ -1,9 +1,11 @@
 window.onscroll = function() {scrollFunction()};
 const btn = document.getElementById("back-to-top");
 
+document.documentElement.scrollTop > 700 ? btn.classList.add("show") : btn.classList.remove("show") ;
+
 function scrollFunction() {
     // talvez precise do document.body.scrollTop > 850 ||  mais pra frente
-    if (document.documentElement.scrollTop > 850) {
+    if (document.documentElement.scrollTop > 700) {
       btn.classList.add("show"); 
     } else {                        // adiciona ou remove a classe que mostra o botao na tela
       btn.classList.remove("show"); 
