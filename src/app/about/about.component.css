@@ -1,0 +1,11 @@
+#title {
+  font-family: "Montserrat", sanss;
+}
+
+#subtitle {
+  font-size: 1.8vw;
+  color: var(--text-color);
+  font-weight: normal;
+  filter: opacity(50%);
+  font-family: "Montserrat", sans-serif;
+}
