@@ -1,8 +1,104 @@
-<div class="flex w-full bg-white dark:bg-defdark">
-    <div class="w-1/2 px-12 mt-12 flex flex-col justify-between mb-12">
-        <div>
-            <h1 id="title" class="font-bold text-8xl text-black dark:text-white">xJoaoPedro</h1>
-            <h2 id="subtitle">Desenvolvedor Front-end</h2>
+<section class="flex h-[90vh] transition-colors duration-500 bg-white dark:bg-defdark">
+    <aside class="bg-[url('/public/images/about-me.png')] bg-center bg-cover about-me-background h-full w-1/4">
+        <div class="about-me-filter w-full h-full bg-deflight70 dark:bg-defdark70 transition-colors duration-500"></div>
+    </aside>
+
+
+    <aside class="w-3/4 h-[90vh] px-12 me-12 flex flex-col justify-around text-defdark dark:text-white">
+        <h2 class="font-bold italic text-[2vw]"> {{ textAboutMe }} </h2>
+        <p class="my-2 font-bold text-[1vw]">
+            Me chamo João Pedro e atualmente estou cursando Análise e Desenvolvimento
+            de Sistemas na ULBRA - Torres.
+        </p>
+
+        <p class="my-2 text-[1vw]">
+            No início do ano de 2023 dei meus primeiros passos no mundo do desenvolvimento, e desde o início percebi
+            que
+            o Front-end e UX/UI eram as áreas onde eu mais me encontrei, onde posso combinar minha criatividade e
+            conhecimento
+            em tecnologia para transformar ideias em interfaces interativas e visualmente atraentes. A possibilidade
+            de criar experiências
+            que não só funcionam de maneira eficiente, mas que também encantam os usuários, me motiva a continuar
+            evoluindo e me aprofundando
+            nesses campos, aprendendo cada vez mais tecnologias e meios de fazer o que faço com mais e mais
+            excelência.
+        </p>
+
+        <p class="my-2 font-bold text-[1vw]">
+            Desde que comecei, já tive oportunidade de fazer alguns trabalhos na área, sendo eles os sites:
+        </p>
+
+        <ul class="list-none text-[1vw]">
+            <li class="mb-2">
+                <a class="transition-all no-underline font-bold hover:underline hover:text-[1.1vw]"
+                    href="https://pet-friends-divina.vercel.app/" target="_blank"
+                    rel="noopener noreferrer">petfriendsdivina.com.br</a> -
+                trabalhei com o serviço de hospedagem da Vercel e de registro da Registro.br.
+            </li>
+            <li>
+                <a class="transition-all no-underline font-bold hover:underline hover:text-[1.1vw]"
+                    href="https://psidaniela.online/" target="_blank" rel="noopener noreferrer">psidaniela.online</a>
+                -
+                tive a oportunidade de usufruir dos serviços da Hostinger tanto para hospedagem como para registro.
+            </li>
+        </ul>
+
+
+        <p class="mt-4 text-[1vw]">
+            Embora tenha grande foco no Front, ainda possuo conhecimentos em mais tecnologias e ferramentas, como:
+        </p>
+
+        <div class="flex mx-auto">
+
+            <div class="group flex flex-col items-center cursor-default w-[6vw] icon-container mx-3">
+                <img class="grayscale min-w-[2vw] w-[2.8vw] scale-100 transition-all group-hover:grayscale-0 group-hover:scale-110"
+                    src="/public/images/python.png" alt="icone python" />
+                <div
+                    class="invisible text-base text-defdark opacity-0 translate-y-2 transition-all mt-3 group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible dark:text-white">
+                    Python</div>
+            </div>
+
+            <div class="group flex flex-col items-center cursor-default w-[6vw] icon-container mx-3">
+                <img class="grayscale min-w-[2vw] w-[2.8vw] scale-100 transition-all group-hover:grayscale-0 group-hover:scale-110"
+                    src="/public/images/csharp.png" alt="icone c sharp" />
+                <div
+                    class="invisible text-base text-defdark opacity-0 translate-y-2 transition-all mt-3 group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible dark:text-white">
+                    C#</div>
+            </div>
+
+            <div class="group flex flex-col items-center cursor-default w-[6vw] icon-container mx-3">
+                <img class="grayscale min-w-[2vw] w-[2.8vw] scale-100 transition-all group-hover:grayscale-0 group-hover:scale-110"
+                    src="/public/images/mysql.png" alt="icone MySQL" />
+                <div
+                    class="invisible text-base text-defdark opacity-0 translate-y-2 transition-all mt-3 group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible dark:text-white">
+                    MySQL</div>
+            </div>
+
+            <div class="group flex flex-col items-center cursor-default w-[6vw] icon-container mx-3">
+                <img class="grayscale min-w-[2vw] w-[2.8vw] scale-100 transition-all group-hover:grayscale-0 group-hover:scale-110"
+                    src="/public/images/arduino.png" alt="icone arduino" />
+                <div
+                    class="invisible text-base text-defdark opacity-0 translate-y-2 transition-all mt-3 group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible dark:text-white">
+                    MySQL</div>
+            </div>
+
+            <div class="group flex flex-col items-center cursor-default w-[6vw] icon-container mx-3">
+                <img class="grayscale min-w-[2vw] w-[2.8vw] scale-100 transition-all group-hover:grayscale-0 group-hover:scale-110"
+                    src="/public/images/git.png" alt="icone git" />
+                <div
+                    class="invisible text-base text-defdark opacity-0 translate-y-2 transition-all mt-3 group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible dark:text-white">
+                    Git</div>
+            </div>
+
+            <div class="group flex flex-col items-center cursor-default w-[6vw] icon-container mx-3">
+                <img class="grayscale min-w-[2vw] w-[2.8vw] scale-100 transition-all group-hover:grayscale-0 group-hover:scale-110"
+                    src="/public/images/autocad.png" alt="icone autocad" />
+                <div
+                    class="invisible text-base text-defdark opacity-0 translate-y-2 transition-all mt-3 group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible dark:text-white">
+                    Autocad</div>
+            </div>
+
         </div>
-    </div>
-</div>
+
+    </aside>
+</section>

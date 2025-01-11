@@ -1,8 +1,8 @@
-<header class="sticky shadow-lg shadow-gray-200 top-0 w-full h-20 transition-all flex justify-between items-center p-4 bg-white dark:bg-defdark dark:shadow-gray-800">
+<header class="sticky z-10 shadow-lg shadow-gray-200 top-0 w-full h-[10vh] transition-all flex justify-between items-center p-4 bg-white dark:bg-defdark dark:shadow-gray-700 transition-colors duration-500">
   <h1 class="text-lg font-bold text-gray-800 dark:text-gray-200">Meu Site</h1>
   <div class="flex items-center">
     <label for="AcceptConditions"
-      class="relative inline-block h-10 w-20 cursor-pointer rounded-full bg-gray-600 transition [-webkit-tap-highlight-color:_transparent] has-[:checked]:bg-white">
+      class="relative inline-block h-10 w-20 cursor-pointer rounded-full bg-gray-600 transition [-webkit-tap-highlight-color:_transparent] has-[:checked]:bg-gray-200">
       <input type="checkbox" (change)="toggleTheme()" [checked]="!isDarkTheme" id="AcceptConditions"
         class="peer sr-only" />
 

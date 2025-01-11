@@ -1,1 +1,1 @@
-parei no about, configurando a fonte do h1
+terminei o about, criei o componente do projects, falta fazer ali, não esquecer o projeto do pokemon

@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { ThemeService } from '../theme.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-about',
@@ -8,19 +7,21 @@ import { ThemeService } from '../theme.service';
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })
-export class AboutComponent implements OnInit {
-  isDarkTheme = false;
+export class AboutComponent {
 
-  constructor(private themeService: ThemeService) {}
+  textAboutMe = 'Hello world!';
+  private baseAboutMe = 'Hello world!';
 
   ngOnInit(): void {
-    this.themeService.theme$.subscribe((isDark) => {
-      this.isDarkTheme = isDark;
-    });;
+    setInterval(() => this.alternarTexto(), 900);
   }
 
-  toggleTheme() {
-    this.themeService.toggleTheme();
+  alternarTexto() {
+    if (this.textAboutMe.endsWith('_')) {
+      this.textAboutMe = this.baseAboutMe;
+    } else {
+      this.textAboutMe = this.textAboutMe.slice(0, -1);
+      this.textAboutMe = this.textAboutMe + "_";
+    }
   }
-
 }
