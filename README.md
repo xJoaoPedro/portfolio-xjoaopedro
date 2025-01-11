@@ -1,1 +1,1 @@
-terminei o about, criei o componente do projects, falta fazer ali, não esquecer o projeto do pokemon
+iniciei o projects, falta fazer ajustar os modais e links dos repositorios e posts

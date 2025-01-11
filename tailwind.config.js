@@ -7,11 +7,18 @@ module.exports = {
       'sans': ["Montserrat", "sans-serif"]
     },
     extend: {
+      boxShadow: {
+        'unic': '2px 2px 15px #FFFFFF40'
+      },
       colors: {
         'defdark': '#231F30',
         'defdark70': '#231F3070',
         'secdark': '#444657',
-        'deflight70': '#FFFFFF70'
+        'deflight70': '#FFFFFF70',
+        'seclight': '#80808025',
+        'night': '#09080C',
+        'linkedin': '#0077B5',
+        'github': '#171515'
       },
       animation: {
         'move-arrow': 'moveArrow 3s ease-in-out 1s infinite',
@@ -19,10 +26,10 @@ module.exports = {
       keyframes: {
         moveArrow: {
           '0%, 100%': {
-            transform: 'rotate(90deg) translateX(0)',
+            transform: 'translateY(0)',
           },
           '50%': {
-            transform: 'rotate(90deg) translateX(-30px)',
+            transform: 'translateY(-30px)',
           },
         },
       },
