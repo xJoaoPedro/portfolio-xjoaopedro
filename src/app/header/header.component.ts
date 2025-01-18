@@ -3,8 +3,8 @@ import { ThemeService } from '../theme.service';
 
 @Component({
   selector: 'app-header',
-  templateUrl: './header.component.html',
   standalone: true,
+  templateUrl: './header.component.html'
 })
 export class HeaderComponent implements OnInit {
   isDarkTheme = false;
@@ -19,5 +19,20 @@ export class HeaderComponent implements OnInit {
 
   toggleTheme() {
     this.themeService.toggleTheme();
+  }
+
+  scrollToComponent(compString: any) {
+    const targetElement = document.getElementById(compString);
+    
+    if (targetElement) {
+      const offset = 8 * (window.innerHeight / 100);
+      const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - offset;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
   }
 }

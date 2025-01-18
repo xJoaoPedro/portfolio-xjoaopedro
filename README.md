@@ -1,1 +1,1 @@
-iniciei o projects, falta fazer ajustar os modais e links dos repositorios e posts
+prjects e modais finalizados, navegação feita também e back to top, falta a parte de formações, contato e responsividade.

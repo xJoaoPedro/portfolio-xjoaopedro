@@ -5,13 +5,12 @@ import { Component } from '@angular/core';
   selector: 'app-my-projects',
   standalone: true,
   imports: [NgIf, NgClass],
-  templateUrl: './my-projects.component.html',
-  styleUrl: './my-projects.component.css'
+  templateUrl: './my-projects.component.html'
 })
 export class MyProjectsComponent {
-url(arg0: string) {
-throw new Error('Method not implemented.');
-}
+  url(arg0: string) {
+    throw new Error('Method not implemented.');
+  }
   isModalOpen: { [key: number]: boolean } = {};
   isClosing: { [key: number]: boolean } = {};
 
