@@ -1,0 +1,1 @@
+feita a parte de formações, falta um pedacinho do contatos, a header com os contatos e responsividade.
