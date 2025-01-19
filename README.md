@@ -1,1 +1,1 @@
-prjects e modais finalizados, navegação feita também e back to top, falta a parte de formações, contato e responsividade.
+feita a parte de formações, falta um pedacinho do contatos, a header com os contatos e responsividade.

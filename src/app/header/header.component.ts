@@ -25,7 +25,7 @@ export class HeaderComponent implements OnInit {
     const targetElement = document.getElementById(compString);
     
     if (targetElement) {
-      const offset = 8 * (window.innerHeight / 100);
+      const offset = 7 * (window.innerHeight / 100);
       const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - offset;
       

@@ -6,13 +6,14 @@ import { FrontPageComponent } from './frontpage/frontpage.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { MyProjectsComponent } from './my-projects/my-projects.component';
+import { FormationsComponent } from "./formations/formations.component";
 
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   standalone: true,
-  imports: [HeaderComponent, RouterOutlet, FrontPageComponent, AboutComponent, MyProjectsComponent, ContactComponent],
+  imports: [HeaderComponent, RouterOutlet, FrontPageComponent, AboutComponent, MyProjectsComponent, ContactComponent, FormationsComponent],
 })
 export class AppComponent implements OnInit {
   constructor(private themeService: ThemeService) { }
