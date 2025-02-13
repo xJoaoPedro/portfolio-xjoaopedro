@@ -1,1 +1,1 @@
-feita a parte de formações, falta um pedacinho do contatos, a header com os contatos e responsividade.
+falta a responsividade, fazer uma branch nova para desenvolver a responsividade.

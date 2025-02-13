@@ -18,7 +18,8 @@ module.exports = {
         'seclight': '#80808025',
         'night': '#09080C',
         'linkedin': '#0077B5',
-        'github': '#171515'
+        'github': '#171515',
+        'whatsapp': '#25D366',
       },
       animation: {
         'move-arrow': 'moveArrow 3s ease-in-out 1s infinite',
