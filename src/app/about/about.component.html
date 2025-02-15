@@ -1,10 +1,10 @@
 <section id="aboutMe" class="flex h-[93vh] transition-colors duration-500 bg-white dark:bg-defdark">
-    <aside class="bg-[url('/public/images/about-me.png')] bg-center bg-cover about-me-background h-full w-1/4">
+    <aside class="bg-[url('/public/images/about-me.png')] bg-center bg-cover about-me-background h-full md:w-2/5 lg:w-1/3 xl:w-1/4">
         <div class="about-me-filter w-full h-full bg-deflight70 dark:bg-defdark70 transition-colors duration-500"></div>
     </aside>
 
 
-    <aside class="w-3/4 h-[90vh] px-12 me-12 flex flex-col justify-around text-defdark dark:text-white">
+    <aside class="md:w-3/5 lg:w-2/3 xl:w-3/4 h-[90vh] px-12 xl:me-12 flex flex-col justify-around text-defdark dark:text-white">
         <h2 class="font-bold italic text-[2vw]"> {{ textAboutMe }} </h2>
         <p class="my-2 font-bold text-[1vw]">
             Me chamo João Pedro e atualmente estou cursando Análise e Desenvolvimento
@@ -45,59 +45,65 @@
 
 
         <p class="mt-4 text-[1vw]">
-            Embora tenha grande foco no Front, ainda possuo conhecimentos em mais tecnologias e ferramentas, como:
+            Aqui estão outras tecnologias e ferramentas que tenho conhecimento:
         </p>
 
-        <div class="flex mx-auto">
+        <div class="flex flex-wrap mx-auto justify-center">
+            <div class="group flex flex-col w-[70px] xl:w-20 xl:mx-4 items-center cursor-default mb-4">
+                <img class="grayscale min-w-10 w-10 xl:w-14 transition-all group-hover:grayscale-0 group-hover:scale-110"
+                    src="/public/images/tailwind.png" alt="icone tailwind" />
+                <div
+                    class="invisible text-base text-defdark opacity-0 translate-y-2 transition-all mt-3 group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible dark:text-white">
+                    Tailwind</div>
+            </div>
 
-            <div class="group flex flex-col items-center cursor-default w-[6vw] mx-3">
-                <img class="grayscale min-w-[2vw] w-[2.8vw] scale-100 transition-all group-hover:grayscale-0 group-hover:scale-110"
-                    src="/public/images/python.png" alt="icone python" />
+            <div class="group flex flex-col w-[70px] xl:w-20 xl:mx-4 items-center cursor-default mb-4">
+                <img class="grayscale min-w-10 w-10 xl:w-14 scale-100 transition-all group-hover:grayscale-0 group-hover:scale-110"
+                    src="/public/images/bootstrap.png" alt="icone bootstrap">
+                <div
+                    class="invisible text-base text-defdark opacity-0 translate-y-2 transition-all mt-3 group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible dark:text-white">
+                    Bootstrap</div>
+            </div>
+
+            <div class="group flex flex-col w-[70px] xl:w-20 xl:mx-4 items-center cursor-default mb-4">
+                <img class="grayscale min-w-10 w-10 xl:w-14 scale-100 transition-all group-hover:grayscale-0 group-hover:scale-110"
+                    src="/public/images/figma.png" alt="icone figma">
+                <div
+                    class="invisible text-base text-defdark opacity-0 translate-y-2 transition-all mt-3 group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible dark:text-white">
+                    Figma</div>
+            </div>
+
+            <div class="group flex flex-col w-[70px] xl:w-20 xl:mx-4 items-center cursor-default mb-4">
+                <img class="grayscale min-w-10 w-10 xl:w-14 scale-100 transition-all group-hover:grayscale-0 group-hover:scale-110"
+                    src="/public/images/python.png" alt="icone Python">
                 <div
                     class="invisible text-base text-defdark opacity-0 translate-y-2 transition-all mt-3 group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible dark:text-white">
                     Python</div>
             </div>
 
-            <div class="group flex flex-col items-center cursor-default w-[6vw] mx-3">
-                <img class="grayscale min-w-[2vw] w-[2.8vw] scale-100 transition-all group-hover:grayscale-0 group-hover:scale-110"
-                    src="/public/images/csharp.png" alt="icone c sharp" />
+            <div class="group flex flex-col w-[70px] xl:w-20 xl:mx-4 items-center cursor-default mb-4">
+                <img class="grayscale min-w-10 w-10 xl:w-14 scale-100 transition-all group-hover:grayscale-0 group-hover:scale-110"
+                    src="/public/images/csharp.png" alt="icone csharp">
                 <div
                     class="invisible text-base text-defdark opacity-0 translate-y-2 transition-all mt-3 group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible dark:text-white">
                     C#</div>
             </div>
 
-            <div class="group flex flex-col items-center cursor-default w-[6vw] mx-3">
-                <img class="grayscale min-w-[2vw] w-[2.8vw] scale-100 transition-all group-hover:grayscale-0 group-hover:scale-110"
-                    src="/public/images/mysql.png" alt="icone MySQL" />
-                <div
-                    class="invisible text-base text-defdark opacity-0 translate-y-2 transition-all mt-3 group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible dark:text-white">
-                    MySQL</div>
-            </div>
-
-            <div class="group flex flex-col items-center cursor-default w-[6vw] mx-3">
-                <img class="grayscale min-w-[2vw] w-[2.8vw] scale-100 transition-all group-hover:grayscale-0 group-hover:scale-110"
-                    src="/public/images/arduino.png" alt="icone arduino" />
+            <div class="group flex flex-col w-[70px] xl:w-20 xl:mx-4 items-center cursor-default mb-4">
+                <img class="grayscale min-w-10 w-10 xl:w-14 scale-100 transition-all group-hover:grayscale-0 group-hover:scale-110"
+                    src="/public/images/arduino.png" alt="icone Arduino">
                 <div
                     class="invisible text-base text-defdark opacity-0 translate-y-2 transition-all mt-3 group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible dark:text-white">
                     Arduino</div>
             </div>
 
-            <div class="group flex flex-col items-center cursor-default w-[6vw] mx-3">
-                <img class="grayscale min-w-[2vw] w-[2.8vw] scale-100 transition-all group-hover:grayscale-0 group-hover:scale-110"
-                    src="/public/images/git.png" alt="icone git" />
+            <div class="group flex flex-col w-[70px] xl:w-20 xl:mx-4 items-center cursor-default mb-4">
+                <img class="grayscale min-w-10 w-10 xl:w-14 scale-100 transition-all group-hover:grayscale-0 group-hover:scale-110"
+                    src="/public/images/autocad.png" alt="icone autocad">
                 <div
                     class="invisible text-base text-defdark opacity-0 translate-y-2 transition-all mt-3 group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible dark:text-white">
-                    Git</div>
+                    AutoCAD</div>
             </div>
-
-            <div class="group flex flex-col items-center cursor-default w-[6vw] mx-3">
-                <img class="grayscale min-w-[2vw] w-[2.8vw] scale-100 transition-all group-hover:grayscale-0 group-hover:scale-110"
-                    src="/public/images/autocad.png" alt="icone autocad" />
-                <div
-                    class="invisible text-base text-defdark opacity-0 translate-y-2 transition-all mt-3 group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible dark:text-white">
-                    Autocad</div>
-            </div>
-
         </div>
 
     </aside>
