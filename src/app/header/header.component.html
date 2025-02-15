@@ -3,6 +3,31 @@
 
       <div class="select-none w-[40%] flex justify-start">
 
+            <button
+                  class="group inline-flex lg:hidden transition-all duration-300 opacity-50 focus:opacity-100 text-white dark:text-defdark bg-defdark dark:bg-white focus:inset-shadow-lg focus:inset-shadow-pink-500 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center"
+                  type="button" data-dropdown-toggle="dropdown"><svg class="w-4 h-4 group-focus:rotate-180" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg></button>
+
+            <!-- Dropdown menu -->
+            <div class="hidden bg-defdark dark:bg-white text-base z-50 list-none divide-y divide-gray-100 rounded-md shadow my-4"
+                  id="dropdown">
+                  <ul aria-labelledby="dropdown">
+                        <li>
+                              <a (click)="scrollToComponent('aboutMe')" class="rounded-tl-md rounded-tr-md text-sm hover:bg-white dark:hover:bg-defdark hover:text-defdark dark:hover:text-white text-white dark:text-defdark block px-4 py-2">Sobre mim</a>
+                        </li>
+                        <li>
+                              <a (click)="scrollToComponent('myProjects')" class="text-sm hover:bg-white dark:hover:bg-defdark hover:text-defdark dark:hover:text-white text-white dark:text-defdark block px-4 py-2">Projetos</a>
+                        </li>
+                        <li>
+                              <a (click)="scrollToComponent('myFormations')" class="text-sm hover:bg-white dark:hover:bg-defdark hover:text-defdark dark:hover:text-white text-white dark:text-defdark block px-4 py-2">Formações</a>
+                        </li>
+                        <li>
+                              <a (click)="scrollToComponent('contacts')" class="rounded-bl-md rounded-br-md text-sm hover:bg-white dark:hover:bg-defdark hover:text-defdark dark:hover:text-white text-white dark:text-defdark block px-4 py-2">Contato</a>
+                        </li>
+                  </ul>
+            </div>
 
             <nav class="hidden lg:block ms-3">
                   <a class="relative group cursor-default select-none text-defdark dark:text-white lg:text-sm xl:text-lg font-bold opacity-40 mx-2 transition-all duration-300 hover:opacity-100"
@@ -31,10 +56,11 @@
       <div class="select-none w-[20%] flex justify-center items-center">
 
 
-            <a href="https://api.whatsapp.com/send?phone=5551998557211&text=Ol%C3%A1%20Jo%C3%A3o,%20vim%20pelo%20seu%20portfolio!/" target="_blank" rel="noreferrer"
-                  class="lg:w-[32px] xl:w-[40px] lg:h-[32px] xl:h-[40px] group opacity-50 transition-all duration-100 hover:scale-105 hover:bg-whatsapp dark:hover:bg-whatsapp hover:opacity-100 active:translate-x-0.5 active:translate-y-0.5 rounded-lg bg-defdark dark:bg-white inline-block p-[5px] mx-2 text-center flex justify-center items-center">
-                  <svg class="fill-white dark:fill-defdark dark:group-hover:fill-white" width="64px" height="64px" viewBox="0 0 16 16"
-                        xmlns="http://www.w3.org/2000/svg">
+            <a href="https://api.whatsapp.com/send?phone=5551998557211&text=Ol%C3%A1%20Jo%C3%A3o,%20vim%20pelo%20seu%20portfolio!/"
+                  target="_blank" rel="noreferrer"
+                  class="mb:w-[32px] xl:w-[40px] mb:h-[32px] xl:h-[40px] group opacity-50 transition-all duration-100 hover:scale-105 hover:bg-whatsapp dark:hover:bg-whatsapp hover:opacity-100 active:translate-x-0.5 active:translate-y-0.5 rounded-lg bg-defdark dark:bg-white inline-block p-[5px] mx-2 text-center flex justify-center items-center">
+                  <svg class="fill-white dark:fill-defdark dark:group-hover:fill-white" width="64px" height="64px"
+                        viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                         <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                         <g id="SVGRepo_iconCarrier">
@@ -49,7 +75,7 @@
             </a>
 
             <a href="https://www.linkedin.com/in/xjoaopedro/" target="_blank" rel="noreferrer"
-                  class="lg:w-[32px] xl:w-[40px] lg:h-[32px] xl:h-[40px] group opacity-50 transition-all duration-100 hover:scale-105 hover:bg-linkedin dark:hover:bg-linkedin hover:opacity-100 active:translate-x-0.5 active:translate-y-0.5 rounded-lg bg-defdark dark:bg-white inline-block p-2 mx-2 text-center flex justify-center items-center">
+                  class="mb:w-[32px] xl:w-[40px] mb:h-[32px] xl:h-[40px] group opacity-50 transition-all duration-100 hover:scale-105 hover:bg-linkedin dark:hover:bg-linkedin hover:opacity-100 active:translate-x-0.5 active:translate-y-0.5 rounded-lg bg-defdark dark:bg-white inline-block p-2 mx-2 text-center flex justify-center items-center">
                   <svg width="64px" height="64px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink">
                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -70,7 +96,7 @@
             </a>
 
             <a href="https://github.com/xJoaoPedro" target="_blank" rel="noreferrer"
-                  class="lg:w-[32px] xl:w-[40px] lg:h-[32px] xl:h-[40px] group opacity-50 transition-all duration-100 hover:scale-105 hover:bg-github dark:hover:bg-github hover:opacity-100 active:translate-x-0.5 active:translate-y-0.5 rounded-lg bg-defdark dark:bg-white inline-block p-2 mx-2 text-center flex justify-center items-center">
+                  class="mb:w-[32px] xl:w-[40px] mb:h-[32px] xl:h-[40px] group opacity-50 transition-all duration-100 hover:scale-105 hover:bg-github dark:hover:bg-github hover:opacity-100 active:translate-x-0.5 active:translate-y-0.5 rounded-lg bg-defdark dark:bg-white inline-block p-2 mx-2 text-center flex justify-center items-center">
                   <svg width="64px" height="64px" viewBox="0 -3 256 256" version="1.1"
                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                         preserveAspectRatio="xMidYMid">
@@ -88,7 +114,7 @@
 
       <div class="select-none w-[40%] flex justify-end">
             <label for="AcceptConditions" title="Trocar tema"
-                  class="relative inline-block lg:h-10 lg:w-20 cursor-pointer rounded-full bg-gray-500 transition [-webkit-tap-highlight-color:_transparent] has-[:checked]:bg-defdark">
+                  class="relative inline-block h-10 w-20 mb:scale-75 xl:scale-100 cursor-pointer rounded-full bg-gray-500 transition [-webkit-tap-highlight-color:_transparent] has-[:checked]:bg-defdark">
                   <input type="checkbox" (change)="toggleTheme()" [checked]="!isDarkTheme" id="AcceptConditions"
                         class="peer sr-only" />
 
@@ -165,7 +191,7 @@
                   </div>
 
                   <span
-                        class="absolute inset-y-0 start-0 m-1.5 lg:size-7 rounded-full bg-defdark transition-all peer-checked:bg-white peer-checked:start-10"></span>
+                        class="absolute inset-y-0 start-0 m-1.5 size-7 rounded-full bg-defdark transition-all peer-checked:bg-white peer-checked:start-10"></span>
             </label>
 
 
