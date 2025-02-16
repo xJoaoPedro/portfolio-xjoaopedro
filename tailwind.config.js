@@ -4,11 +4,11 @@ module.exports = {
   darkMode: 'class', // Ativar o suporte ao modo escuro baseado em classes
   theme: {
     screens: {
-      'mb': {'min': '480px'},
-      'sm': {'min': '640px'},
-      'md': {'min': '768px'},
-      'lg': {'min': '1024px'},
-      'xl': {'min': '1280px'},
+      'mb': { 'min': '480px' },
+      'sm': { 'min': '640px' },
+      'md': { 'min': '768px' },
+      'lg': { 'min': '1024px' },
+      'xl': { 'min': '1280px' },
     },
     fontFamily: {
       'sans': ["Montserrat", "sans-serif"]
