@@ -8,6 +8,7 @@ import { ContactComponent } from './contact/contact.component';
 import { MyProjectsComponent } from './my-projects/my-projects.component';
 import { FormationsComponent } from "./formations/formations.component";
 import { FrontParallaxComponent } from './front-parallax/front-parallax.component';
+import { initFlowbite } from 'flowbite';
 
 
 @Component({
@@ -21,6 +22,8 @@ export class AppComponent implements OnInit {
   btn: any;
 
   ngOnInit() {
+    initFlowbite();
+
     if (this.themeService.isDarkTheme()) {
       document.documentElement.classList.add('dark');
     } else {

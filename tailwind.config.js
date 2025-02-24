@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{html,ts}'], // Analise os arquivos do Angular
+  content: [
+    "./src/**/*.{html,ts}",
+    "./node_modules/flowbite/**/*.js" // add this line
+  ], // Analise os arquivos do Angular
   darkMode: 'class', // Ativar o suporte ao modo escuro baseado em classes
   theme: {
     screens: {
@@ -43,5 +46,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
 };
