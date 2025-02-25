@@ -6,6 +6,6 @@ header feita
 frontpage feita
 sobre mim feita
 contatos feita
+projetos feita.
 
-Projetos semi feita, falta ajustar os links do modal pronto e ajudar os outros 2 projetos para implementar o modal correto.
 Formações pendente
