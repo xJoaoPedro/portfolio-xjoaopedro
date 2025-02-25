@@ -2,9 +2,9 @@
 module.exports = {
   content: [
     "./src/**/*.{html,ts}",
-    "./node_modules/flowbite/**/*.js" // add this line
-  ], // Analise os arquivos do Angular
-  darkMode: 'class', // Ativar o suporte ao modo escuro baseado em classes
+    "./node_modules/flowbite/**/*.js" 
+  ],
+  darkMode: 'class',
   theme: {
     screens: {
       'mb': { 'min': '480px' },

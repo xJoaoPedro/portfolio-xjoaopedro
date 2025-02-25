@@ -7,5 +7,5 @@ frontpage feita
 sobre mim feita
 contatos feita
 
-Projetos semi feita, modal novo e responsivo, falta 2 projetos
+Projetos semi feita, falta ajustar os links do modal pronto e ajudar os outros 2 projetos para implementar o modal correto.
 Formações pendente

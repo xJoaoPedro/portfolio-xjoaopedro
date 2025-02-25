@@ -25,9 +25,8 @@
       <div
         class="absolute flex flex-col justify-center items-center w-full h-full top-0 left-0 bg-deflight70 dark:bg-defdark70">
         <p class="text-sm mb:text-base">Projeto Pet Friends Divina</p>
-        <button type="button" (click)="openModal(2)"
-          class="scale-75 mb:scale-100 bg-defdark dark:bg-white py-2 px-4 hover:bg-defdark70 dark:hover:bg-deflight70 rounded-full lg:opacity-0 lg:invisible lg:translate-y-16 translate-y-2 mb:translate-y-8 transition-all duration-500 text-white dark:text-defdark group-hover:opacity-100 group-hover:visible lg:group-hover:translate-y-8"
-          data-toggle="modal" data-target="#modalPetFriends">
+        <button data-modal-target="modalPet" data-modal-toggle="modalPet" type="button"
+          class="scale-75 mb:scale-100 bg-defdark dark:bg-white py-2 px-4 hover:bg-defdark70 dark:hover:bg-deflight70 rounded-full lg:opacity-0 lg:invisible lg:translate-y-16 translate-y-2 mb:translate-y-8 transition-all duration-500 text-white dark:text-defdark group-hover:opacity-100 group-hover:visible lg:group-hover:translate-y-8">
           Ver mais
         </button>
       </div>
@@ -35,13 +34,12 @@
 
     <div
       class="select-none group lg:w-1/3 relative text-center h-fit bg-seclight dark:bg-secdark text-defdark dark:text-white font-bold m-4 sm:m-8 md:m-12 p-2 transition-all duration-500 hover:scale-110">
-      <img class="w-full" src="/public/images/pokecrud.png" alt="projeto petfriends">
+      <img class="w-full" src="/public/images/pokecrud.png" alt="projeto PokeCRUD">
       <div
         class="absolute flex flex-col justify-center items-center w-full h-full top-0 left-0 bg-deflight70 dark:bg-defdark70">
         <p class="text-sm mb:text-base">Pokémon CRUD</p>
-        <button type="button" (click)="openModal(3)"
-          class="scale-75 mb:scale-100 bg-defdark dark:bg-white py-2 px-4 hover:bg-defdark70 dark:hover:bg-deflight70 rounded-full lg:opacity-0 lg:invisible lg:translate-y-16 translate-y-2 mb:translate-y-8 transition-all duration-500 text-white dark:text-defdark group-hover:opacity-100 group-hover:visible lg:group-hover:translate-y-8"
-          data-toggle="modal" data-target="#modalPetFriends">
+        <button data-modal-target="modalPoke" data-modal-toggle="modalPoke" type="button"
+          class="scale-75 mb:scale-100 bg-defdark dark:bg-white py-2 px-4 hover:bg-defdark70 dark:hover:bg-deflight70 rounded-full lg:opacity-0 lg:invisible lg:translate-y-16 translate-y-2 mb:translate-y-8 transition-all duration-500 text-white dark:text-defdark group-hover:opacity-100 group-hover:visible lg:group-hover:translate-y-8">
           Ver mais
         </button>
       </div>
@@ -54,188 +52,303 @@
 </section>
 
 <!-- Modal 1 -->
-<!-- <div class="relative z-10" aria-labelledby="modal-title-1" role="dialog" aria-modal="true" *ngIf="isModalOpen[1]">
-    <div class="fixed inset-0 bg-gray-500/75 dark:bg-defdark70 transition-all duration-500 ease-out" aria-hidden="true"
-      [ngClass]="{ 'opacity-0': isClosing[1], 'opacity-100': !isClosing[1] }" (click)="closeModal(1)"></div>
-    <div class="fixed inset-0 z-10 w-screen overflow-y-auto" [ngClass]="{
-            'opacity-0 translate-y-4 scale-95': isClosing[1],
-            'opacity-100 translate-y-0 scale-100': !isClosing[1]
-          }">
-      <div class="flex min-h-[93vh] mt-[7vh] justify-center p-4 text-center sm:items-center sm:p-0">
+<div id="modalDani" tabindex="-1" aria-hidden="true"
+  class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+  <div class="relative w-full max-w-2xl max-h-full">
+    <!-- Modal content -->
+    <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-800">
+      <!-- Modal header -->
+      <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600 border-gray-200">
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+          🦋 Psicóloga Daniela Bezi 🧠
+        </h3>
+        <button type="button"
+          class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+          data-modal-hide="modalDani">
+          <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+          </svg>
+        </button>
+      </div>
+      <!-- Modal body -->
+      <div>
 
+        <div id="accordion-dani" data-accordion="collapse">
+          <h2 id="accordion-dani-heading-1">
+            <button type="button"
+              class="flex items-center justify-between w-full px-5 py-3 font-medium rtl:text-right text-gray-500 border-b dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+              data-accordion-target="#accordion-dani-body-1" aria-expanded="true" aria-controls="accordion-dani-body-1">
+              <span>Vídeo</span>
+              <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 5 5 1 1 5" />
+              </svg>
+            </button>
+          </h2>
+          <div id="accordion-dani-body-1" class="hidden" aria-labelledby="accordion-dani-heading-1">
+            <video class="me-2 p-3 bg-white dark:bg-defdark rounded-md min-w-18" controls autoplay muted>
+              <source src="/public/video/psidaniela.mp4" type="video/mp4" />
 
-        <div
-          class="p-5 lg:mx-16 xl:mx-24 relative flex flex-col items-center xl:flex-row transform overflow-hidden rounded-lg bg-defdark dark:bg-white text-left shadow-xl transition-all duration-500 ease-out sm:my-8 w-full">
-
-          <video class="me-2 p-3 bg-white dark:bg-defdark rounded-md min-w-18  lg:w-[400px] xl:w-[650px]" controls
-            autoplay muted>
-            <source src="/public/video/psidaniela.mp4" type="video/mp4" />
-
-            Download the
-            <a href="/public/video/psidaniela.mp4">MP4</a>
-            video.
-          </video>
-          <div>
-            <p class="font-bold text-md mt-2 lg:text-xl text-white dark:text-defdark">🦋 Psicóloga Daniela Bezi 🧠</p>
-            <div
-              class="bg-defdark dark:bg-white text-white dark:text-defdark px-4 pb-4 pt-5 sm:p-4 sm:pb-4 transition-all duration-500">
-              <p class="my-2 text-sm xl:text-md"> 💡 <strong>Sobre o projeto:</strong> <br /> <br />
-
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati eos iusto ab itaque, aspernatur
-                dolorum vitae animi culpa voluptatibus similique hic quam aliquid ipsam, a quasi tenetur suscipit ipsum
-                quaerat.
-                Dolor, ex mollitia accusantium deleniti placeat illo hic, ipsum sint ut fuga doloremque id deserunt
-                delectus eligendi eum distinctio similique, illum reprehenderit sed perferendis labore itaque beatae esse?
-                Dolor, perspiciatis!
+              Download the
+              <a href="/public/video/psidaniela.mp4">MP4</a>
+              video.
+            </video>
+          </div>
+          <h2 id="accordion-dani-heading-2">
+            <button type="button"
+              class="flex items-center justify-between w-full px-5 py-3 font-medium rtl:text-right text-gray-500 border-b dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+              data-accordion-target="#accordion-dani-body-2" aria-expanded="true" aria-controls="accordion-dani-body-2">
+              <span class="text-start">Sobre o projeto e tecnologias</span>
+              <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 5 5 1 1 5" />
+              </svg>
+            </button>
+          </h2>
+          <div id="accordion-dani-body-2" class="hidden" aria-labelledby="accordion-dani-heading-2">
+            <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+              <p class="mb-4 text-sm xl:text-md text-defdark dark:text-white"> 💡 <strong>Sobre o projeto:</strong>
+                <br />
+                lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem loremlorem lorem lorem
+                lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
               </p>
-              <hr />
-              <p class="my-2 text-sm xl:text-md"> ⚙️ <strong>Tecnologias:</strong> <br /> <br />
-                HTML5, CSS3 (Flexbox), JavaScript Vanilla (ES6+) e JQuery, Design Responsivo e
-                Mobile First, Prototipagem (Figma), SEO Básico, Controle de Versão (Git), Hospedagem Web e Gerenciamento
-                de Domínios (Hostinger).
+
+              <p class="text-sm xl:text-md text-defdark dark:text-white"> ⚙️ <strong>Tecnologias:</strong> <br />
+                HTML, CSS (Flexbox), JavaScript e JQuery, Design Responsivo e
+                Mobile First, Prototipagem (Figma), SEO Básico e Controle de Versão (Git).
               </p>
-            </div>
-            <div
-              class="bg-defdark dark:bg-white text-white dark:text-defdark px-4 pb-3 sm:flex sm:flex-col justify-between sm:px-6">
-              <div class="flex justify-center">
-                <a href="https://psidaniela.online/" target="_blank"
-                  class="border w-full font-bold text-center rounded-lg bg-defdark70 p-2 my-4 hover:bg-white hover:text-defdark dark:bg-white dark:text-defdark dark:border-defdark dark:hover:bg-defdark dark:hover:text-white transition-colors duration-300">Acessar
-                  site</a>
-              </div>
-              <div class="flex flex-row-reverse justify-between">
-                <button (click)="closeModal(1)"
-                  class="active:translate-y-1 shadow-gray-500/20 mt-3 inline-flex w-1/5 justify-center rounded-md bg-red-500 px-3 py-2 text-sm font-semibold text-white hover:bg-red-600 transition-all duration-200">
-                  Fechar
-                </button>
-
-                <a href="https://github.com/xJoaoPedro/psicoDani" target="_blank"
-                  class="active:translate-y-1 shadow-gray-500/20 mt-3 flex w-1/4 justify-center rounded-md bg-github px-4 py-2 text-sm font-semibold text-white hover:bg-github/20 transition-all duration-200">
-                  <svg class="me-2" width="20px" height="20px" viewBox="0 0 20 20" version="1.1"
-                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                      <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -7559.000000)" fill="#FFF">
-                        <g id="icons" transform="translate(56.000000, 160.000000)">
-                          <path
-                            d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399"
-                            id="github-[#142]">
-
-                          </path>
-                        </g>
-                      </g>
-                    </g>
-                  </svg>
-                  <p class="lg:block hidden"> Repositório </p>
-                </a>
-
-                <a href="/" target="_blank"
-                  class="active:translate-y-1 shadow-gray-500/20 mt-3 inline-flex w-2/5 justify-center rounded-md bg-linkedin px-3 py-2 text-sm font-semibold text-white hover:bg-linkedin/80 transition-all duration-200">
-                  <svg class="me-2" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M18.72 3.99997H5.37C5.19793 3.99191 5.02595 4.01786 4.86392 4.07635C4.70189 4.13484 4.55299 4.22471 4.42573 4.34081C4.29848 4.45692 4.19537 4.59699 4.12232 4.75299C4.04927 4.909 4.0077 5.07788 4 5.24997V18.63C4.01008 18.9901 4.15766 19.3328 4.41243 19.5875C4.6672 19.8423 5.00984 19.9899 5.37 20H18.72C19.0701 19.9844 19.4002 19.8322 19.6395 19.5761C19.8788 19.32 20.0082 18.9804 20 18.63V5.24997C20.0029 5.08247 19.9715 4.91616 19.9078 4.76122C19.8441 4.60629 19.7494 4.466 19.6295 4.34895C19.5097 4.23191 19.3672 4.14059 19.2108 4.08058C19.0544 4.02057 18.8874 3.99314 18.72 3.99997ZM9 17.34H6.67V10.21H9V17.34ZM7.89 9.12997C7.72741 9.13564 7.5654 9.10762 7.41416 9.04768C7.26291 8.98774 7.12569 8.89717 7.01113 8.78166C6.89656 8.66615 6.80711 8.5282 6.74841 8.37647C6.6897 8.22474 6.66301 8.06251 6.67 7.89997C6.66281 7.73567 6.69004 7.57169 6.74995 7.41854C6.80986 7.26538 6.90112 7.12644 7.01787 7.01063C7.13463 6.89481 7.2743 6.80468 7.42793 6.74602C7.58157 6.68735 7.74577 6.66145 7.91 6.66997C8.07259 6.66431 8.2346 6.69232 8.38584 6.75226C8.53709 6.8122 8.67431 6.90277 8.78887 7.01828C8.90344 7.13379 8.99289 7.27174 9.05159 7.42347C9.1103 7.5752 9.13699 7.73743 9.13 7.89997C9.13719 8.06427 9.10996 8.22825 9.05005 8.3814C8.99014 8.53456 8.89888 8.6735 8.78213 8.78931C8.66537 8.90513 8.5257 8.99526 8.37207 9.05392C8.21843 9.11259 8.05423 9.13849 7.89 9.12997ZM17.34 17.34H15V13.44C15 12.51 14.67 11.87 13.84 11.87C13.5822 11.8722 13.3313 11.9541 13.1219 12.1045C12.9124 12.2549 12.7546 12.4664 12.67 12.71C12.605 12.8926 12.5778 13.0865 12.59 13.28V17.34H10.29V10.21H12.59V11.21C12.7945 10.8343 13.0988 10.5225 13.4694 10.3089C13.84 10.0954 14.2624 9.98848 14.69 9.99997C16.2 9.99997 17.34 11 17.34 13.13V17.34Z"
-                      fill="#FFF" />
-                  </svg>
-                  Ver no Linkedin
-                </a>
-              </div>
-
             </div>
           </div>
         </div>
+
+      </div>
+      <!-- Modal footer -->
+      <div class="flex flex-col justify-center p-4 space-y-4 border-t border-gray-200 rounded-b dark:border-gray-600">
+        <div class="flex md:flex-row flex-col justify-end md:space-x-2">
+          <button data-modal-hide="modalDani" type="button"
+            class="md:w-2/3 w-full group flex justify-center transition-all duration-300 text-white bg-linkedin hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg border border-white dark:border-gray-800 hover:border-linkedin dark:hover:border-linkedin text-sm font-medium px-3 py-1.5 hover:text-linkedin dark:hover:text-linkedin focus:z-10 dark:text-white dark:border-gray-500">
+            <svg class="transition-all duration-300 fill-white group-hover:fill-linkedin mr-2" width="20px"
+              height="20px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <title>linkedin</title>
+                <path
+                  d="M28.778 1.004h-25.56c-0.008-0-0.017-0-0.027-0-1.199 0-2.172 0.964-2.186 2.159v25.672c0.014 1.196 0.987 2.161 2.186 2.161 0.010 0 0.019-0 0.029-0h25.555c0.008 0 0.018 0 0.028 0 1.2 0 2.175-0.963 2.194-2.159l0-0.002v-25.67c-0.019-1.197-0.994-2.161-2.195-2.161-0.010 0-0.019 0-0.029 0h0.001zM9.9 26.562h-4.454v-14.311h4.454zM7.674 10.293c-1.425 0-2.579-1.155-2.579-2.579s1.155-2.579 2.579-2.579c1.424 0 2.579 1.154 2.579 2.578v0c0 0.001 0 0.002 0 0.004 0 1.423-1.154 2.577-2.577 2.577-0.001 0-0.002 0-0.003 0h0zM26.556 26.562h-4.441v-6.959c0-1.66-0.034-3.795-2.314-3.795-2.316 0-2.669 1.806-2.669 3.673v7.082h-4.441v-14.311h4.266v1.951h0.058c0.828-1.395 2.326-2.315 4.039-2.315 0.061 0 0.121 0.001 0.181 0.003l-0.009-0c4.5 0 5.332 2.962 5.332 6.817v7.855z">
+                </path>
+              </g>
+            </svg>
+            LinkedIn</button>
+          <button data-modal-hide="modalDani" type="button"
+            class="md:w-1/2 w-full group flex justify-center transition-all duration-300 text-white bg-github hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg border border-white dark:border-gray-800 hover:border-github dark:hover:border-github text-sm font-medium px-3 py-1.5 hover:text-github dark:hover:text-red-500 focus:z-10 dark:text-white dark:border-gray-500">
+            <svg class="mr-2" width="20px"
+              height="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path class="transition-all duration-300 fill-white group-hover:fill-github"
+                  d="M4.0744 2.9938C4.13263 1.96371 4.37869 1.51577 5.08432 1.15606C5.84357 0.768899 7.04106 0.949072 8.45014 1.66261C9.05706 1.97009 9.11886 1.97635 10.1825 1.83998C11.5963 1.65865 13.4164 1.65929 14.7213 1.84164C15.7081 1.97954 15.7729 1.97265 16.3813 1.66453C18.3814 0.651679 19.9605 0.71795 20.5323 1.8387C20.8177 2.39812 20.8707 3.84971 20.6494 5.04695C20.5267 5.71069 20.5397 5.79356 20.8353 6.22912C22.915 9.29385 21.4165 14.2616 17.8528 16.1155C17.5801 16.2574 17.3503 16.3452 17.163 16.4167C16.5879 16.6363 16.4133 16.703 16.6247 17.7138C16.7265 18.2 16.8491 19.4088 16.8973 20.4002C16.9844 22.1922 16.9831 22.2047 16.6688 22.5703C16.241 23.0676 15.6244 23.076 15.2066 22.5902C14.9341 22.2734 14.9075 22.1238 14.9075 20.9015C14.9075 19.0952 14.7095 17.8946 14.2417 16.8658C13.6854 15.6415 14.0978 15.185 15.37 14.9114C17.1383 14.531 18.5194 13.4397 19.2892 11.8146C20.0211 10.2698 20.1314 8.13501 18.8082 6.83668C18.4319 6.3895 18.4057 5.98446 18.6744 4.76309C18.7748 4.3066 18.859 3.71768 18.8615 3.45425C18.8653 3.03823 18.8274 2.97541 18.5719 2.97541C18.4102 2.97541 17.7924 3.21062 17.1992 3.49805L16.2524 3.95695C16.1663 3.99866 16.07 4.0147 15.975 4.0038C13.5675 3.72746 11.2799 3.72319 8.86062 4.00488C8.76526 4.01598 8.66853 3.99994 8.58215 3.95802L7.63585 3.49882C7.04259 3.21087 6.42482 2.97541 6.26317 2.97541C5.88941 2.97541 5.88379 3.25135 6.22447 4.89078C6.43258 5.89203 6.57262 6.11513 5.97101 6.91572C5.06925 8.11576 4.844 9.60592 5.32757 11.1716C5.93704 13.1446 7.4295 14.4775 9.52773 14.9222C10.7926 15.1903 11.1232 15.5401 10.6402 16.9905C10.26 18.1319 10.0196 18.4261 9.46707 18.4261C8.72365 18.4261 8.25796 17.7821 8.51424 17.1082C8.62712 16.8112 8.59354 16.7795 7.89711 16.5255C5.77117 15.7504 4.14514 14.0131 3.40172 11.7223C2.82711 9.95184 3.07994 7.64739 4.00175 6.25453C4.31561 5.78028 4.32047 5.74006 4.174 4.83217C4.09113 4.31822 4.04631 3.49103 4.0744 2.9938Z"
+                  fill="#ffffff"></path>
+                <path class="transition-all duration-300 fill-white group-hover:fill-github"
+                  d="M3.33203 15.9454C3.02568 15.4859 2.40481 15.3617 1.94528 15.6681C1.48576 15.9744 1.36158 16.5953 1.66793 17.0548C1.8941 17.3941 2.16467 17.6728 2.39444 17.9025C2.4368 17.9449 2.47796 17.9858 2.51815 18.0257C2.71062 18.2169 2.88056 18.3857 3.05124 18.5861C3.42875 19.0292 3.80536 19.626 4.0194 20.6962C4.11474 21.1729 4.45739 21.4297 4.64725 21.5419C4.85315 21.6635 5.07812 21.7352 5.26325 21.7819C5.64196 21.8774 6.10169 21.927 6.53799 21.9559C7.01695 21.9877 7.53592 21.998 7.99999 22.0008C8.00033 22.5527 8.44791 23.0001 8.99998 23.0001C9.55227 23.0001 9.99998 22.5524 9.99998 22.0001V21.0001C9.99998 20.4478 9.55227 20.0001 8.99998 20.0001C8.90571 20.0001 8.80372 20.0004 8.69569 20.0008C8.10883 20.0026 7.34388 20.0049 6.67018 19.9603C6.34531 19.9388 6.07825 19.9083 5.88241 19.871C5.58083 18.6871 5.09362 17.8994 4.57373 17.2891C4.34391 17.0194 4.10593 16.7834 3.91236 16.5914C3.87612 16.5555 3.84144 16.5211 3.80865 16.4883C3.5853 16.265 3.4392 16.1062 3.33203 15.9454Z"
+                  fill="#ffffff"></path>
+              </g>
+            </svg>
+            Repositório
+          </button>
+          <button data-modal-hide="modalDani" type="button"
+            class="md:w-1/3 w-full transition-all duration-300 text-white bg-red-500 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg border border-white dark:border-gray-800 hover:border-red-500 dark:hover:border-red-500 text-sm font-medium px-3 py-1.5 hover:text-red-500 dark:hover:text-red-500 focus:z-10 dark:text-white dark:border-gray-500">Fechar</button>
+        </div>
+        <div class="flex justify-center">
+          <a class="transition-all duration-300 w-3/4 text-center text-white hover:text-defdark dark:hover:text-white bg-defdark hover:bg-white dark:bg-white dark:hover:bg-gray-800 rounded-lg border border-white dark:border-gray-800 hover:border hover:border-defdark dark:hover:border-white text-sm font-medium px-3 py-1.5 focus:z-10 dark:text-defdark dark:border-gray-500"
+            href="https://psidaniela.online/" target="_blank" rel="noopener noreferrer">
+            Acessar site
+          </a>
+        </div>
       </div>
     </div>
-  </div> -->
+  </div>
+</div>
 
 <!-- Modal 2 -->
-<!-- <div class="relative z-10" aria-labelledby="modal-title-1" role="dialog" aria-modal="true" *ngIf="isModalOpen[2]">
-      <div class="fixed inset-0 bg-gray-500/75 dark:bg-defdark70 transition-opacity duration-500 ease-out"
-        aria-hidden="true" [ngClass]="{ 'opacity-0': isClosing[2], 'opacity-100': !isClosing[2] }"
-        (click)="closeModal(2)"></div>
-      <div class="fixed inset-0 z-10 w-screen overflow-y-auto" [ngClass]="{
-            'opacity-0 translate-y-4 scale-95': isClosing[2],
-            'opacity-100 translate-y-0 scale-100': !isClosing[2]
-          }">
-        <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+<div id="modalPet" tabindex="-1" aria-hidden="true"
+  class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+  <div class="relative w-full max-w-2xl max-h-full">
+    <!-- Modal content -->
+    <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-800">
+      <!-- Modal header -->
+      <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600 border-gray-200">
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+          🐕 Projeto Pet Friends Divina 🐱
+        </h3>
+        <button type="button"
+          class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+          data-modal-hide="modalPet">
+          <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+          </svg>
+        </button>
+      </div>
+      <!-- Modal body -->
+      <div>
 
-
-          <div
-            class="p-5 relative flex transform overflow-hidden rounded-lg bg-defdark dark:bg-white text-left shadow-xl transition-all duration-500 ease-out sm:my-8 sm:w-full sm:max-w-[80vw]">
-            <video class="me-2 px-3 bg-white dark:bg-defdark rounded-md" controls autoplay muted width="750">
+        <div id="accordion-pet" data-accordion="collapse">
+          <h2 id="accordion-pet-heading-3">
+            <button type="button"
+              class="flex items-center justify-between w-full px-5 py-3 font-medium rtl:text-right text-gray-500 border-b dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+              data-accordion-target="#accordion-pet-body-3" aria-expanded="true" aria-controls="accordion-pet-body-3">
+              <span>Vídeo</span>
+              <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 5 5 1 1 5" />
+              </svg>
+            </button>
+          </h2>
+          <div id="accordion-pet-body-3" class="hidden" aria-labelledby="accordion-pet-heading-3">
+            <video class="me-2 p-3 bg-white dark:bg-defdark rounded-md min-w-18" controls autoplay muted>
               <source src="/public/video/petfriends.mp4" type="video/mp4" />
 
               Download the
               <a href="/public/video/petfriends.mp4">MP4</a>
               video.
             </video>
-            <div>
-              <p class="font-bold text-xl text-white dark:text-defdark">🐕 Projeto Pet Friends Divina 🐱</p>
-              <div class="bg-defdark dark:bg-white text-white dark:text-defdark px-4 pb-4 pt-5 sm:p-4 sm:pb-4">
-                <p class="my-2"> 💡 <strong>Sobre o projeto:</strong> <br /> <br />
+          </div>
+          <h2 id="accordion-pet-heading-4">
+            <button type="button"
+              class="flex items-center justify-between w-full px-5 py-3 font-medium rtl:text-right text-gray-500 border-b dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+              data-accordion-target="#accordion-pet-body-4" aria-expanded="true" aria-controls="accordion-pet-body-4">
+              <span>Sobre o projeto e tecnologias</span>
+              <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 5 5 1 1 5" />
+              </svg>
+            </button>
+          </h2>
+          <div id="accordion-pet-body-4" class="hidden" aria-labelledby="accordion-pet-heading-4">
+            <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+              <p class="mb-4 text-sm xl:text-md text-defdark dark:text-white"> 💡 <strong>Sobre o projeto:</strong>
+                <br />
+                O objetivo da iniciativa é auxiliar a comunidade animal local, dando visibilidade e
+                tornando mais práticos os cuidados e processos de procura pelos animais. Integrar um
+                ambiente tecnológico para o auxílio nas causas animais, tais como doações, trocas e
+                adoções.
+              </p>
 
-                  O objetivo da iniciativa é auxiliar a comunidade animal local, dando visibilidade e
-                  tornando mais práticos os cuidados e processos de procura pelos animais. Integrar um
-                  ambiente tecnológico para o auxílio nas causas animais, tais como doações, trocas e
-                  adoções.
-                </p>
-                <hr />
-                <p class="my-2"> ⚙️ <strong>Tecnologias:</strong> <br /> <br />
-                  HTML5, CSS3 (Flexbox, Grid Layout), JavaScript Vanilla (ES6+), Design Responsivo e
-                  Mobile First, Prototipagem (Figma), SEO Básico, Controle de Versão (Git), Hospedagem Web
-                  (Vercel) e Gerenciamento de Domínios (Registro.br).
-                </p>
-              </div>
-              <div
-                class="bg-defdark dark:bg-white text-white dark:text-defdark px-4 pb-3 sm:flex sm:flex-col justify-between sm:px-6">
-                <div class="flex justify-center">
-                  <a href="https://pet-friends-divina.vercel.app/" target="_blank"
-                    class="border w-full font-bold text-center rounded-lg bg-defdark70 p-2 my-4 hover:bg-white hover:text-defdark dark:bg-white dark:text-defdark dark:border-defdark dark:hover:bg-defdark dark:hover:text-white transition-colors duration-300">Acessar
-                    site</a>
-                </div>
-                <div class="flex flex-row-reverse justify-between">
-                  <button (click)="closeModal(2)"
-                    class="active:translate-y-1 shadow-gray-500/20 mt-3 inline-flex w-1/5 justify-center rounded-md bg-red-500 px-3 py-2 text-sm font-semibold text-white hover:bg-red-600 transition-all duration-200">
-                    Fechar
-                  </button>
-
-                  <a href="https://github.com/xJoaoPedro/pet_friends_divina" target="_blank"
-                    class="active:translate-y-1 shadow-gray-500/20 mt-3 flex w-1/4 justify-center rounded-md bg-github px-4 py-2 text-sm font-semibold text-white hover:bg-github/20 transition-all duration-200">
-                    <svg class="me-2" width="20px" height="20px" viewBox="0 0 20 20" version="1.1"
-                      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                        <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -7559.000000)" fill="#FFF">
-                          <g id="icons" transform="translate(56.000000, 160.000000)">
-                            <path
-                              d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399"
-                              id="github-[#142]">
-
-                            </path>
-                          </g>
-                        </g>
-                      </g>
-                    </svg>
-                    Repositório
-                  </a>
-
-                  <a href="/" target="_blank"
-                    class="active:translate-y-1 shadow-gray-500/20 mt-3 inline-flex w-2/5 justify-center rounded-md bg-linkedin px-3 py-2 text-sm font-semibold text-white hover:bg-linkedin/80 transition-all duration-200">
-                    <svg class="me-2" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M18.72 3.99997H5.37C5.19793 3.99191 5.02595 4.01786 4.86392 4.07635C4.70189 4.13484 4.55299 4.22471 4.42573 4.34081C4.29848 4.45692 4.19537 4.59699 4.12232 4.75299C4.04927 4.909 4.0077 5.07788 4 5.24997V18.63C4.01008 18.9901 4.15766 19.3328 4.41243 19.5875C4.6672 19.8423 5.00984 19.9899 5.37 20H18.72C19.0701 19.9844 19.4002 19.8322 19.6395 19.5761C19.8788 19.32 20.0082 18.9804 20 18.63V5.24997C20.0029 5.08247 19.9715 4.91616 19.9078 4.76122C19.8441 4.60629 19.7494 4.466 19.6295 4.34895C19.5097 4.23191 19.3672 4.14059 19.2108 4.08058C19.0544 4.02057 18.8874 3.99314 18.72 3.99997ZM9 17.34H6.67V10.21H9V17.34ZM7.89 9.12997C7.72741 9.13564 7.5654 9.10762 7.41416 9.04768C7.26291 8.98774 7.12569 8.89717 7.01113 8.78166C6.89656 8.66615 6.80711 8.5282 6.74841 8.37647C6.6897 8.22474 6.66301 8.06251 6.67 7.89997C6.66281 7.73567 6.69004 7.57169 6.74995 7.41854C6.80986 7.26538 6.90112 7.12644 7.01787 7.01063C7.13463 6.89481 7.2743 6.80468 7.42793 6.74602C7.58157 6.68735 7.74577 6.66145 7.91 6.66997C8.07259 6.66431 8.2346 6.69232 8.38584 6.75226C8.53709 6.8122 8.67431 6.90277 8.78887 7.01828C8.90344 7.13379 8.99289 7.27174 9.05159 7.42347C9.1103 7.5752 9.13699 7.73743 9.13 7.89997C9.13719 8.06427 9.10996 8.22825 9.05005 8.3814C8.99014 8.53456 8.89888 8.6735 8.78213 8.78931C8.66537 8.90513 8.5257 8.99526 8.37207 9.05392C8.21843 9.11259 8.05423 9.13849 7.89 9.12997ZM17.34 17.34H15V13.44C15 12.51 14.67 11.87 13.84 11.87C13.5822 11.8722 13.3313 11.9541 13.1219 12.1045C12.9124 12.2549 12.7546 12.4664 12.67 12.71C12.605 12.8926 12.5778 13.0865 12.59 13.28V17.34H10.29V10.21H12.59V11.21C12.7945 10.8343 13.0988 10.5225 13.4694 10.3089C13.84 10.0954 14.2624 9.98848 14.69 9.99997C16.2 9.99997 17.34 11 17.34 13.13V17.34Z"
-                        fill="#FFF" />
-                    </svg>
-                    Ver no Linkedin
-                  </a>
-                </div>
-
-              </div>
+              <p class="text-sm xl:text-md text-defdark dark:text-white"> ⚙️ <strong>Tecnologias:</strong> <br />
+                HTML, CSS (Flexbox, Grid), JavaScript, Design Responsivo e Mobile First, Prototipagem (Figma), SEO
+                Básico, Controle de Versão (Git), Hospedagem Web (Vercel) e Gerenciamento de Domínios (Registro.br).
+              </p>
             </div>
           </div>
         </div>
+
       </div>
-    </div> -->
+      <!-- Modal footer -->
+      <div class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
+        <button data-modal-hide="modalPet" type="button"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">I
+          accept</button>
+        <button data-modal-hide="modalPet" type="button"
+          class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Decline</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Modal 3 -->
+<div id="modalPoke" tabindex="-1" aria-hidden="true"
+  class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+  <div class="relative w-full max-w-2xl max-h-full">
+    <!-- Modal content -->
+    <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-800">
+      <!-- Modal header -->
+      <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600 border-gray-200">
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+          ⚡ Pokémon CRUD 🐹
+        </h3>
+        <button type="button"
+          class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+          data-modal-hide="modalPoke">
+          <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+          </svg>
+        </button>
+      </div>
+      <!-- Modal body -->
+      <div>
+
+        <div id="accordion-poke" data-accordion="collapse">
+          <h2 id="accordion-poke-heading-5">
+            <button type="button"
+              class="flex items-center justify-between w-full px-5 py-3 font-medium rtl:text-right text-gray-500 border-b dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+              data-accordion-target="#accordion-poke-body-5" aria-expanded="true" aria-controls="accordion-poke-body-5">
+              <span>Vídeo</span>
+              <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 5 5 1 1 5" />
+              </svg>
+            </button>
+          </h2>
+          <div id="accordion-poke-body-5" class="hidden" aria-labelledby="accordion-poke-heading-5">
+            <video class="me-2 p-3 bg-white dark:bg-defdark rounded-md min-w-18" controls autoplay muted>
+              <source src="/public/video/pokecrud.mp4" type="video/mp4" />
+
+              Download the
+              <a href="/public/video/pokecrud.mp4">MP4</a>
+              video.
+            </video>
+          </div>
+          <h2 id="accordion-poke-heading-6">
+            <button type="button"
+              class="flex items-center justify-between w-full px-5 py-3 font-medium rtl:text-right text-gray-500 border-b dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+              data-accordion-target="#accordion-poke-body-6" aria-expanded="true" aria-controls="accordion-poke-body-6">
+              <span>Sobre o projeto e tecnologias</span>
+              <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 5 5 1 1 5" />
+              </svg>
+            </button>
+          </h2>
+          <div id="accordion-poke-body-6" class="hidden" aria-labelledby="accordion-poke-heading-6">
+            <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+              <p class="mb-4 text-sm xl:text-md text-defdark dark:text-white"> 💡 <strong>Sobre o projeto:</strong>
+                <br />
+                O objetivo da iniciativa é auxiliar a comunidade animal local, dando visibilidade e
+                tornando mais práticos os cuidados e processos de procura pelos animais. Integrar um
+                ambiente tecnológico para o auxílio nas causas animais, tais como doações, trocas e
+                adoções.
+              </p>
+
+              <p class="text-sm xl:text-md text-defdark dark:text-white"> ⚙️ <strong>Tecnologias:</strong> <br />
+                HTML, CSS (Flexbox, Grid), JavaScript, Design Responsivo e Mobile First, Prototipagem (Figma), SEO
+                Básico, Controle de Versão (Git), Hospedagem Web (Vercel) e Gerenciamento de Domínios (Registro.br).
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- Modal footer -->
+      <div class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
+        <button data-modal-hide="modalPoke" type="button"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">I
+          accept</button>
+        <button data-modal-hide="modalPoke" type="button"
+          class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Decline</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- <div class="relative z-10" aria-labelledby="modal-title-1" role="dialog" aria-modal="true" *ngIf="isModalOpen[3]">
       <div class="fixed inset-0 bg-gray-500/75 dark:bg-defdark70 transition-opacity duration-500 ease-out"
         aria-hidden="true" [ngClass]="{ 'opacity-0': isClosing[3], 'opacity-100': !isClosing[3] }"
@@ -333,92 +446,3 @@
         </div>
       </div>
     </div> -->
-
-
-
-<div id="modalDani" tabindex="-1" aria-hidden="true"
-  class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
-  <div class="relative w-full max-w-2xl max-h-full">
-    <!-- Modal content -->
-    <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-800">
-      <!-- Modal header -->
-      <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600 border-gray-200">
-        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-          🦋 Psicóloga Daniela Bezi 🧠
-        </h3>
-        <button type="button"
-          class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-          data-modal-hide="modalDani">
-          <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-          </svg>
-        </button>
-      </div>
-      <!-- Modal body -->
-      <div>
-
-        <div id="accordion-collapse" data-accordion="collapse">
-          <h2 id="accordion-collapse-heading-1">
-            <button type="button"
-              class="flex items-center justify-between w-full px-5 py-3 font-medium rtl:text-right text-gray-500 border-b dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
-              data-accordion-target="#accordion-collapse-body-1" aria-expanded="true"
-              aria-controls="accordion-collapse-body-1">
-              <span>Vídeo</span>
-              <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M9 5 5 1 1 5" />
-              </svg>
-            </button>
-          </h2>
-          <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
-            <video class="me-2 p-3 bg-white dark:bg-defdark rounded-md min-w-18" controls
-              autoplay muted>
-              <source src="/public/video/psidaniela.mp4" type="video/mp4" />
-
-              Download the
-              <a href="/public/video/psidaniela.mp4">MP4</a>
-              video.
-            </video>
-          </div>
-          <h2 id="accordion-collapse-heading-2">
-            <button type="button"
-              class="flex items-center justify-between w-full px-5 py-3 font-medium rtl:text-right text-gray-500 border-b dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
-              data-accordion-target="#accordion-collapse-body-2" aria-expanded="true"
-              aria-controls="accordion-collapse-body-2">
-              <span>Sobre o projeto e tecnologias</span>
-              <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M9 5 5 1 1 5" />
-              </svg>
-            </button>
-          </h2>
-          <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
-            <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-              <p class="mb-4 text-sm xl:text-md text-defdark dark:text-white"> 💡 <strong>Sobre o projeto:</strong> <br />
-                HTML, CSS (Flexbox), JavaScript e JQuery, Design Responsivo e
-                Mobile First, Prototipagem (Figma), SEO Básico e Controle de Versão (Git).
-              </p>
-
-              <p class="text-sm xl:text-md text-defdark dark:text-white"> ⚙️ <strong>Tecnologias:</strong> <br />
-                HTML, CSS (Flexbox), JavaScript e JQuery, Design Responsivo e
-                Mobile First, Prototipagem (Figma), SEO Básico e Controle de Versão (Git).
-              </p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-      <!-- Modal footer -->
-      <div class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
-        <button data-modal-hide="modalDani" type="button"
-          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">I
-          accept</button>
-        <button data-modal-hide="modalDani" type="button"
-          class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Decline</button>
-      </div>
-    </div>
-  </div>
-</div>
