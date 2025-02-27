@@ -1,11 +1,7 @@
-fazer cada parte de uma vez para identificar onde as coisas estão quebrando
+ROADMAP:
 
-front-page com parallax feita, decidir qual usar
-
-header feita
-frontpage feita
-sobre mim feita
-contatos feita
-projetos feita.
-
-Formações pendente
+- [x] Desenvolvimento das seções principais
+- [x] Implementação de modo escuro e claro
+- [ ] ⏳ Responsividade
+- [ ] Adicionar mais componentização aos elementos da página
+- [ ] Adicionar seção de posts
