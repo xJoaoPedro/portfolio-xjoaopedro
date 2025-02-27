@@ -42,11 +42,11 @@ export class FormationsComponent {
 
     switch (difference) {
       case 0: // Item selecionado
-        return 'z-9 left-1/2 transform -translate-x-1/2 scale-110 opacity-100';
+        return 'z-10 left-1/2 transform -translate-x-1/2 scale-110 opacity-100';
       case 1: // Próximo item
-        return 'z-5 left-3/4 transform -translate-x-1/2 translate-y-[40px] scale-[60%] opacity-70';
+        return 'z-[9] right-[28%] transform translate-x-1/2 translate-y-[40px] scale-75 opacity-80';
       case 2: // Segundo à direita
-        return 'z-4 left-[90%] transform -translate-x-1/2 translate-y-[100px] scale-[80%] opacity-50';
+        return 'z-[8] right-[8%] transform -translate-x-[30%] translate-y-[100px] scale-[80%] opacity-50';
       case this.items.length - 1: // Item anterior (à esquerda)
         return 'z-5 left-1/4 transform -translate-x-1/2 translate-y-[30px] scale-[60%] opacity-70';
       case this.items.length - 2: // Segundo à esquerda
