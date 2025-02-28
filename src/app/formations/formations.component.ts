@@ -44,17 +44,17 @@ export class FormationsComponent {
       case 0: // Item selecionado
         return 'z-10 left-1/2 transform -translate-x-1/2 scale-100 opacity-100';
       case 1: // Próximo item
-        return 'z-[9] right-[28%] transform translate-x-1/2 translate-y-[50px] scale-[70%] opacity-80';
+        return 'z-[9] right-[5%] sm:right-[20%] lg:right-[28%] transform translate-x-1/2 md:translate-y-[50px] translate-y-[10px] scale-[70%] opacity-90';
       case 2: // Segundo à direita
-        return 'z-[8] right-[8%] transform translate-x-[30%] translate-y-[110px] scale-[40%] opacity-50';
+        return 'z-[8] right-[2%] md:right-[8%] transform translate-x-[30%] md:translate-y-[110px] translate-y-[10px] scale-[40%] opacity-50';
       case this.items.length - 1: // Item anterior (à esquerda)
-        return 'z-[9] left-[28%] transform -translate-x-1/2 translate-y-[50px] scale-[70%] opacity-80';
+        return 'z-[9] left-[5%] sm:left-[20%] lg:left-[28%] transform -translate-x-1/2 md:translate-y-[50px] translate-y-[10px] scale-[70%] opacity-90';
       case this.items.length - 2: // Segundo à esquerda
-        return 'z-[8] left-[8%] transform -translate-x-[30%] translate-y-[110px] scale-[40%] opacity-50';
+        return 'z-[8] left-[2%] md:left-[8%] transform -translate-x-[30%] md:translate-y-[110px] translate-y-[10px] scale-[40%] opacity-50';
       case 3: // escondido a direita
-        return 'right-[-32%] transform -translate-x-1/2 ease-in-out z-6 scale-[25%] opacity-10';
+        return 'right-[-32%] transform -translate-x-1/2 ease-in-out z-[6] scale-[25%] opacity-0';
       case 4:
-        return 'left-[-32%] transform -translate-x-1/2 ease-in-out z-6 scale-[25%] opacity-10';
+        return 'left-[-32%] transform -translate-x-1/2 ease-in-out z-[6] scale-[25%] opacity-0';
       default:
         return 'transform scale-[0.2] left-1/2';
 
