@@ -3,13 +3,13 @@
     <h3 class="ps-12 my-12 font-bold text-3xl text-defdark dark:text-white">Aqui estão algumas das minhas qualificações,
         abrangendo tanto o Front-end quanto outras áreas:</h3>
 
-    <div class="carousel-full w-full flex flex-col items-center mt-2 relative">
-        <div id="carousel" class="relative w-full h-[400px]">
+    <div class="carousel-full w-full flex flex-col items-center">
+        <div id="carousel" class="relative w-full h-[300px] md:h-[500px] overflow-hidden">
             <!-- Geração dinâmica de itens -->
             <div *ngFor="let item of items; let i = index" [class]="
             'absolute top-0 transition-all duration-700 ease-in-out ' + getClass(i)
           ">
-                <img [src]="item" alt="Certificado" class="rounded-lg shadow-lg w-[400px] transition-all duration-700">
+                <img [src]="item" alt="Certificado" class="rounded-lg shadow-lg md:w-[400px] w-[200px] transition-all duration-700">
             </div>
         </div>
 
