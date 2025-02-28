@@ -1,28 +1,32 @@
 <section id="myFormations"
-    class="bg-white dark:bg-defdark flex flex-col h-[93vh] transition-colors duration-500 justify-around pb-8">
-    <h3 class="ps-12 my-12 font-bold text-3xl text-defdark dark:text-white">Aqui estão algumas das minhas qualificações,
-        abrangendo tanto o Front-end quanto outras áreas:</h3>
+  class="bg-white dark:bg-defdark flex flex-col h-[93vh] transition-colors duration-500 justify-around pb-8">
+  <h3 class="ps-8 md:ps-12 my-12 md:my-24 font-bold text-2xl md:text-3xl text-defdark dark:text-white">Aqui estão
+    algumas das minhas qualificações,
+    abrangendo tanto o Front-end quanto outras áreas:</h3>
 
-    <div class="carousel-full w-full flex flex-col items-center">
-        <div id="carousel" class="relative w-full h-[300px] md:h-[500px] overflow-hidden">
-            <!-- Geração dinâmica de itens -->
-            <div *ngFor="let item of items; let i = index" [class]="
-            'absolute top-0 transition-all duration-700 ease-in-out ' + getClass(i)
+  <div class="carousel-full w-full flex flex-col items-center">
+    <div id="carousel" class="relative w-full h-[300px] md:h-[500px] p-2 overflow-hidden">
+      <!-- Geração dinâmica de itens -->
+      <div *ngFor="let item of items; let i = index" [class]="
+            'p-2 bg-defdark/70 dark:bg-white/70 rounded-lg absolute top-0 transition-all duration-700 ease-in-out ' + getClass(i)
           ">
-                <img [src]="item" alt="Certificado" class="rounded-lg shadow-lg md:w-[400px] w-[200px] transition-all duration-700">
-            </div>
-        </div>
-
-        <div class="text-defdark dark:text-white mt-2 flex cursor-default">
-            <button id="prev" class="px-4 text-defdark dark:text-white font-bold opacity-70 hover:opacity-100 hover:scale-110 cursor-pointer transition-all duration-500"
-                (click)="moveToSelected('prev')">
-                Anterior
-            </button>
-            |
-            <button id="next" class="px-4 text-defdark dark:text-white font-bold opacity-70 hover:opacity-100 hover:scale-110 cursor-pointer transition-all duration-500"
-                (click)="moveToSelected('next')">
-                Próximo
-            </button>
-        </div>
+        <img [src]="item" alt="Certificado"
+          class="rounded-lg shadow-lg md:w-[400px] w-[200px] transition-all duration-700">
+      </div>
     </div>
+
+    <div class="text-defdark dark:text-white mt-2 flex cursor-default">
+      <button id="prev"
+        class="px-4 text-defdark dark:text-white font-bold opacity-70 hover:opacity-100 hover:scale-110 cursor-pointer transition-all duration-500"
+        (click)="moveToSelected('prev')">
+        Anterior
+      </button>
+      |
+      <button id="next"
+        class="px-4 text-defdark dark:text-white font-bold opacity-70 hover:opacity-100 hover:scale-110 cursor-pointer transition-all duration-500"
+        (click)="moveToSelected('next')">
+        Próximo
+      </button>
+    </div>
+  </div>
 </section>

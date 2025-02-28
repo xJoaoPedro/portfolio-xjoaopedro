@@ -10,13 +10,13 @@ import { Component } from '@angular/core';
 })
 export class FormationsComponent {
   items = [
-    '/public/certs/certFront1.jpg',
-    '/public/certs/certFront2.jpg',
-    '/public/certs/certOutro1.jpg',
-    '/public/certs/certOutro2.jpg',
-    '/public/certs/certOutro3.jpg',
-    '/public/certs/certFront3.jpg',
-    '/public/certs/certFront4.jpg',
+    '/public/certs/certAlgJs.avif',
+    '/public/certs/certBalta.avif',
+    '/public/certs/certgitegithub.avif',
+    '/public/certs/certAngular.avif',
+    '/public/certs/certHTMLeCSS.avif',
+    '/public/certs/certCampus.avif',
+    '/public/certs/certPokedex.avif',
   ];
 
   selectedIndex = 3; // Índice inicial
@@ -56,7 +56,7 @@ export class FormationsComponent {
       case 4:
         return 'left-[-32%] transform -translate-x-1/2 ease-in-out z-[6] scale-[25%] opacity-0';
       default:
-        return 'transform scale-[0.2] left-1/2';
+        return ' transform scale-[0.2] left-[-32%] scale-10 opacity-0';
 
     }
   }
